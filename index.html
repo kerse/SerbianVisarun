@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расчёт Даты</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        input, button {
+            margin: 5px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <input type="date" id="inputDate">
+    <p>Сегодня: <span id="currentDate"></span></p>
+    <p>Дата визарана: <span id="newDate"></span></p>
+    <p>Дней до визарана: <span id="daysDifference"></span></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
