@@ -1,32 +1,39 @@
-.datepicker {
-    user-select: none;
-    touch-action: pan-y;
-    overflow: hidden;
+﻿.scroll-selector {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: Arial, sans-serif;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
 }
 
-.month {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 10px;
+    .scroll-selector::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera*/
+    }
+
+.month-selector, .day-selector {
+    padding: 10px;
 }
 
-.days {
-    display: flex;
-    overflow: hidden;
+.month-selector {
+    background-color: #f44336; /* красный */
 }
 
-.day {
-    flex: none;
-    width: 40px;
-    height: 40px;
-    margin: 5px;
+.day-selector {
+    background-color: #4CAF50; /* зеленый */
+}
+
+.scroll-item {
+    flex: 0 0 auto;
+    width: 100px; /* или любая другая ширина, в зависимости от вашего дизайна */
+    height: 100px; /* для квадратных блоков */
+    margin: 0 5px;
+    text-align: center;
+    scroll-snap-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0;
-    border-radius: 10px;
+}
+
+.selected {
+    border: 2px solid #000; /* выделение выбранного элемента */
 }
